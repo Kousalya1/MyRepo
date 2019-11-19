@@ -1,0 +1,53 @@
+#Author: kousalyakanikannan@gmail.com
+Feature: Conduit Application - Home Page
+
+  Background:                                    [90m# Home.feature:4[0m
+    [32mGiven [0m[32mI Sign in to the application[0m           [90m# StepDefinitions.Sign_in_to_the_application()[0m
+    [32mAnd [0m[32mYour feed should get loaded if available[0m [90m# StepDefinitions.Your_feed_should_get_loaded_if_available()[0m
+
+  Scenario: Like Your feed                                                  [90m# Home.feature:8[0m
+    [32mWhen [0m[32mClick on the like button, should be able to like the feed[0m          [90m# StepDefinitions.Click_on_the_like_button()[0m
+    [32mThen [0m[32mClick on the like button again, should be able to dislike the feed[0m [90m# StepDefinitions.Click_on_the_like_button_to_dislike()[0m
+
+  Background:                                    [90m# Home.feature:4[0m
+    [32mGiven [0m[32mI Sign in to the application[0m           [90m# StepDefinitions.Sign_in_to_the_application()[0m
+    [32mAnd [0m[32mYour feed should get loaded if available[0m [90m# StepDefinitions.Your_feed_should_get_loaded_if_available()[0m
+
+  Scenario: Comment on Your feed                                  [90m# Home.feature:12[0m
+    [31mWhen [0m[31mClick on the read more link[0m                              [90m# StepDefinitions.Click_on_the_read_more_link()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Read more...']"}
+        (Session info: chrome=78.0.3904.97)
+      For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'LAPTOP-60T950Q4', ip: '192.168.43.137', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\KOUSALYA\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55430}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+      Session ID: 8fa33f62e8eefa94a42a67afeb5c3cc9
+      *** Element info: {Using=xpath, value=//span[text()='Read more...']}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy16.click(Unknown Source)
+      	at PageObjects.HomePage.clickReadMoreLink(HomePage.java:163)
+      	at StepDefinition.StepDefinitions.Click_on_the_read_more_link(StepDefinitions.java:147)
+      	at ✽.When Click on the read more link(Home.feature:13)
+      [0m
+    [36mAnd [0m[36mPost a comment as "[0m[36m[1mNice Article![0m[36m" and ensure it is posted[0m [90m# StepDefinitions.Write_a_comment_and_post(String)[0m
+    [36mThen [0m[36mDelete the comment and ensure it is deleted[0m              [90m# StepDefinitions.delete_the_comment()[0m
+
+  Background:                                    [90m# Home.feature:4[0m
+    [32mGiven [0m[32mI Sign in to the application[0m           [90m# StepDefinitions.Sign_in_to_the_application()[0m
+    [32mAnd [0m[32mYour feed should get loaded if available[0m [90m# StepDefinitions.Your_feed_should_get_loaded_if_available()[0m
